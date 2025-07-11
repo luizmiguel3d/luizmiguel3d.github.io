@@ -11,12 +11,22 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif; /* Fonte alterada para Montserrat */
-            background-image: url('files/background.webp'); /* Imagem de fundo adicionada */
+            /* Aplica os gradientes para se assemelhar à imagem */
+            background-image:
+                /* Gradiente radial principal para a área mais clara */
+                radial-gradient(circle at 75% 25%, #87CEEB, #4682B4), /* Azul claro para azul aço */
+                /* Gradiente linear para a base escura azul/roxa, agora mais escuro à esquerda */
+                linear-gradient(to right, #1A0033, #2F006B), /* Muito escuro à esquerda para roxo escuro */
+                /* Gradiente radial secundário para um brilho sutil */
+                radial-gradient(circle at 25% 75%, #6A5ACD, #483D8B); /* Azul ardósia para azul escuro ardósia */
+            /* Define o modo de mistura para 'screen' para um efeito de clareamento */
+            background-blend-mode: screen, overlay, screen; /* Mistura os gradientes */
             background-size: cover; /* A imagem cobre todo o elemento sem esticar */
             background-position: center center; /* Centraliza a imagem */
             background-repeat: no-repeat; /* Impede a repetição da imagem */
             background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
             color: #7ec7f9; /* Cor do texto alterada */
+            overflow: hidden; /* Evita barras de rolagem */
         }
         .link-button {
             background-color: #1c1f33; /* Cor de fundo dos botões alterada */
