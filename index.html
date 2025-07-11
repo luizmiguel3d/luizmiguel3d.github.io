@@ -13,8 +13,6 @@
             font-family: 'Montserrat', sans-serif; /* Fonte alterada para Montserrat */
             /* Aplica um único gradiente radial para o fundo */
             background-image: radial-gradient(circle at 70% 30%, #1e1c27 0%,#0c0a07 100%);
-            /* as: #121421; */
-            ad: #212433;
             /* O gradiente começa claro no topo-direita e escurece para o canto inferior-esquerdo */
             background-size: cover; /* A imagem cobre todo o elemento sem esticar */
             background-position: center center; /* Centraliza a imagem */
@@ -24,7 +22,7 @@
             overflow: hidden; /* Evita barras de rolagem */
         }
         .link-button {
-            background-color: #242431; /* Cor de fundo dos botões alterada */
+            background-color: #292a35; /* Cor de fundo dos botões alterada */
             border-radius: 0.5rem; /* rounded-xl */
             padding: 0.5rem 0.5rem; /* py-4 px-6 */
             display: flex;
@@ -37,14 +35,14 @@
         }
         .link-button:hover {
             transform: translateY(-2px);
-            background-color: #2a2f4c; /* Um tom mais escuro no hover para contraste */
+            background-color: #372a4c; /* Um tom mais escuro no hover para contraste */
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
         .icon-placeholder {
             width: 50px; /* Tamanho fixo para o ícone, aumentado */
             height: 50px; /* Tamanho fixo para o ícone, aumentado */
             margin-right: 1rem; /* Espaçamento fixo entre o ícone e o texto */
-            border-radius: 1rem; /* Pequeno arredondamento para o placeholder */
+            border-radius: 0.25rem; /* Pequeno arredondamento para o placeholder */
             flex-shrink: 0; /* Impede que o ícone encolha */
         }
         .button-content-area {
@@ -101,10 +99,9 @@
 
         <!-- Container para os cartões de categoria -->
         <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 w-full justify-center items-start">
-            
             <!-- Cartão: Game Development -->
-            <div class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2">
-                <h2 class="category-title text-[#bfe6ff]">Game Development</h2>
+            <div class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2 border-2 border-[#242431]">
+                <h2 class="category-title text-[#e67094]">Game Development</h2>
                 <div class="space-y-4">
                     <!-- Link: Memory Traces: Egypt on Steam -->
                     <a href="https://store.steampowered.com/app/2150580/Memory_Traces_Egypt/?curator_clanid=42284791" target="_blank" rel="noopener noreferrer" class="link-button">
@@ -141,8 +138,8 @@
             </div>
 
             <!-- Cartão: 3D Realtime and Renders -->
-            <div class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2">
-                <h2 class="category-title text-[#bfe6ff]">3D Art, VFX, Renders</h2>
+            <div class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2 border-2 border-[#242431]">
+                <h2 class="category-title text-[#73bfe6]">3D Art, VFX, Renders</h2>
                 <div class="space-y-4">
                     <!-- Link: Photorealistic Renders (Behance - lm3d_design) -->
                     <a href="https://www.behance.net/lm3d_design" target="_blank" rel="noopener noreferrer" class="link-button">
