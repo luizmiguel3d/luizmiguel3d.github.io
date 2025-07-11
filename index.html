@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luiz Miguel 3D - Linktree</title>
+    <title>Luiz Miguel 3D - Links</title>
     <!-- Inclui Tailwind CSS para estilização -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Importa a fonte Montserrat do Google Fonts -->
@@ -11,16 +11,11 @@
     <style>
         body {
             font-family: 'Montserrat', sans-serif; /* Fonte alterada para Montserrat */
-            /* Aplica os gradientes para se assemelhar à imagem */
-            background-image:
-                /* Gradiente radial principal para a área mais clara */
-                radial-gradient(circle at 75% 25%, #87CEEB, #4682B4), /* Azul claro para azul aço */
-                /* Gradiente linear para a base escura azul/roxa, agora mais escuro à esquerda */
-                linear-gradient(to right, #1A0033, #2F006B), /* Muito escuro à esquerda para roxo escuro */
-                /* Gradiente radial secundário para um brilho sutil */
-                radial-gradient(circle at 25% 75%, #6A5ACD, #483D8B); /* Azul ardósia para azul escuro ardósia */
-            /* Define o modo de mistura para 'screen' para um efeito de clareamento */
-            background-blend-mode: screen, overlay, screen; /* Mistura os gradientes */
+            /* Aplica um único gradiente radial para o fundo */
+            background-image: radial-gradient(circle at 70% 30%, #1e1c27 0%,#0c0a07 100%);
+            /* as: #121421; */
+            ad: #212433;
+            /* O gradiente começa claro no topo-direita e escurece para o canto inferior-esquerdo */
             background-size: cover; /* A imagem cobre todo o elemento sem esticar */
             background-position: center center; /* Centraliza a imagem */
             background-repeat: no-repeat; /* Impede a repetição da imagem */
@@ -29,8 +24,8 @@
             overflow: hidden; /* Evita barras de rolagem */
         }
         .link-button {
-            background-color: #1c1f33; /* Cor de fundo dos botões alterada */
-            border-radius: 1.25rem; /* rounded-xl */
+            background-color: #242431; /* Cor de fundo dos botões alterada */
+            border-radius: 0.5rem; /* rounded-xl */
             padding: 0.5rem 0.5rem; /* py-4 px-6 */
             display: flex;
             align-items: center;
@@ -108,7 +103,7 @@
         <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 w-full justify-center items-start">
             
             <!-- Cartão: Game Development -->
-            <div class="bg-[#121421] bg-opacity-60 rounded-xl p-6 shadow-lg w-full md:w-1/2">
+            <div class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2">
                 <h2 class="category-title text-[#bfe6ff]">Game Development</h2>
                 <div class="space-y-4">
                     <!-- Link: Memory Traces: Egypt on Steam -->
@@ -146,7 +141,7 @@
             </div>
 
             <!-- Cartão: 3D Realtime and Renders -->
-            <div class="bg-[#121421] bg-opacity-60 rounded-xl p-6 shadow-lg w-full md:w-1/2">
+            <div class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2">
                 <h2 class="category-title text-[#bfe6ff]">3D Art, VFX, Renders</h2>
                 <div class="space-y-4">
                     <!-- Link: Photorealistic Renders (Behance - lm3d_design) -->
