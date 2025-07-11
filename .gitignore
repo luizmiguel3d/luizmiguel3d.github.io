@@ -1,3 +1,4 @@
 # Ignorar arquivos do Krita
 *.kra
 *.png~
+*.png1
