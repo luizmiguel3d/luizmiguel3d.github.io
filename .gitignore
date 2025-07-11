@@ -1,5 +1,6 @@
 # Ignorar arquivos do Krita
 *.kra
 *.png~
+*.webp~
 *.png1
 *.png2
