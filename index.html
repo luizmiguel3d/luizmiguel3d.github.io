@@ -5,225 +5,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luiz Miguel 3D - Links</title>
-    <!-- Inclui Tailwind CSS para estilização -->
+    <!-- Carrega o framework Tailwind CSS para estilização rápida e responsiva -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Importa a fonte Montserrat do Google Fonts -->
+    <!-- Carrega a fonte 'Montserrat' do Google Fonts para uma tipografia consistente -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Estilos globais para o corpo da página */
         body {
-            font-family: 'Montserrat', sans-serif;
-            /* Fonte alterada para Montserrat */
-            /* Aplica um único gradiente radial para o fundo */
+            font-family: 'Montserrat', sans-serif; /* Define a fonte principal */
+            /* Gradiente radial para o fundo, criando um efeito visual atraente */
             background-image: radial-gradient(circle at 70% 30%, #1e1c27 0%, #0c0a07 100%);
-            /* O gradiente começa claro no topo-direita e escurece para o canto inferior-esquerdo */
-            background-size: cover;
-            /* A imagem cobre todo o elemento sem esticar */
-            background-position: center center;
-            /* Centraliza a imagem */
-            background-repeat: no-repeat;
-            /* Impede a repetição da imagem */
-            background-attachment: fixed;
-            /* Mantém a imagem fixa ao rolar */
-            color: #7ec7f9;
-            /* Cor do texto alterada */
-            /* Removido 'overflow: hidden;' para permitir a rolagem */
+            background-size: cover; /* Garante que a imagem de fundo cubra toda a área */
+            background-position: center center; /* Centraliza a imagem de fundo */
+            background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+            background-attachment: fixed; /* Fixa a imagem de fundo enquanto a página rola */
+            color: #7ec7f9; /* Cor padrão do texto */
         }
 
+        /* Estilos para os botões de link */
         .link-button {
-            background-color: #292a35;
-            /* Cor de fundo dos botões alterada */
-            border-radius: 0.5rem;
-            /* rounded-xl */
-            padding: 0.5rem 0.5rem;
-            /* py-4 px-6 */
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #cacaca;
-            /* Cor do texto do botão alterada */
-            font-weight: 600;
-            /* font-semibold */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+            background-color: #292a35; /* Cor de fundo do botão */
+            border-radius: 0.5rem; /* Borda arredondada */
+            padding: 0.5rem 0.5rem; /* Espaçamento interno */
+            display: flex; /* Usa flexbox para alinhar conteúdo */
+            align-items: center; /* Alinha itens verticalmente ao centro */
+            text-decoration: none; /* Remove sublinhado padrão de links */
+            color: #cacaca; /* Cor do texto do link */
+            font-weight: 600; /* Peso da fonte */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+            /* Transições suaves para efeitos de hover */
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
 
+        /* Efeitos de hover para os botões de link */
         .link-button:hover {
-            transform: translateY(-2px);
-            background-color: #372a4c;
-            /* Um tom mais escuro no hover para contraste */
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px); /* Move o botão ligeiramente para cima no hover */
+            background-color: #372a4c; /* Altera a cor de fundo no hover */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
         }
 
+        /* Estilos para o placeholder do ícone dentro dos botões */
         .icon-placeholder {
-            width: 50px;
-            /* Tamanho fixo para o ícone, aumentado */
-            height: 50px;
-            /* Tamanho fixo para o ícone, aumentado */
-            margin-right: 1rem;
-            /* Espaçamento fixo entre o ícone e o texto */
-            border-radius: 0.25rem;
-            /* Pequeno arredondamento para o placeholder */
-            flex-shrink: 0;
-            /* Impede que o ícone encolha */
+            width: 50px; /* Largura fixa */
+            height: 50px; /* Altura fixa */
+            margin-right: 1rem; /* Espaçamento à direita */
+            border-radius: 0.25rem; /* Borda levemente arredondada */
+            flex-shrink: 0; /* Impede que a imagem encolha */
+            object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
         }
 
+        /* Área de conteúdo dentro do botão, para o texto */
         .button-content-area {
-            flex-grow: 1;
-            /* Faz esta área ocupar o espaço restante */
-            display: flex;
-            /* Torna-o um container flexível */
-            align-items: center;
-            /* Centraliza verticalmente o conteúdo */
-            position: relative;
-            /* Necessário para posicionamento absoluto do feedback */
-            height: 100%;
-            /* Ocupa a altura total do botão */
-            min-width: 0;
-            /* CRUCIAL: Permite que o item flexível encolha abaixo do seu tamanho de conteúdo intrínseco */
+            flex-grow: 1; /* Permite que esta área ocupe o espaço disponível */
+            display: flex; /* Usa flexbox para alinhar o texto */
+            align-items: center; /* Alinha o texto verticalmente ao centro */
+            position: relative; /* Necessário para posicionamento absoluto de elementos filhos, se houver */
+            height: 100%; /* Ocupa a altura total do pai */
+            min-width: 0; /* Permite que o conteúdo encolha se necessário */
         }
 
+        /* Estilos para o texto dentro dos botões */
         .button-text {
-            white-space: nowrap;
-            /* Impede que o texto quebre a linha */
-            overflow: hidden;
-            /* Oculta o texto que excede o espaço */
-            text-overflow: ellipsis;
-            /* Adiciona "..." se o texto for muito longo */
-            transition: opacity 0.3s ease-in-out;
-            /* Transição para o efeito de fade */
-            text-align: center;
-            /* Centraliza o texto dentro do seu espaço disponível */
-            flex-grow: 1;
-            /* Permite que o texto cresça e ocupe o espaço */
-            min-width: 0;
-            /* Permite que o texto encolha dentro de button-content-area */
+            white-space: nowrap; /* Impede que o texto quebre linha */
+            overflow: hidden; /* Oculta o texto que excede a largura */
+            text-overflow: ellipsis; /* Adiciona reticências (...) para texto cortado */
+            transition: opacity 0.3s ease-in-out; /* Transição suave para opacidade */
+            text-align: center; /* Centraliza o texto */
+            flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+            min-width: 0; /* Permite que o texto encolha se necessário */
         }
 
+        /* Estilos para os títulos das categorias */
         .category-title {
-            font-size: 1.5rem;
-            /* text-2xl */
-            font-weight: 700;
-            /* font-bold */
-            margin-top: 0;
-            /* Ajustado para dentro do cartão */
-            margin-bottom: 1rem;
-            text-align: center;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-            /* Sombra para os títulos de categoria */
+            font-size: 1.5rem; /* Tamanho da fonte */
+            font-weight: 700; /* Peso da fonte (negrito) */
+            margin-top: 0; /* Remove margem superior padrão */
+            margin-bottom: 1rem; /* Margem inferior */
+            text-align: center; /* Centraliza o texto */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Sombra de texto para destaque */
         }
 
-        /* Estilos de sombra de texto para melhor legibilidade */
+        /* Classes utilitárias para sombra de texto */
         .text-shadow-strong {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            /* Sombra para o nome */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra de texto mais forte */
         }
 
         .text-shadow-medium {
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-            /* Sombra para cargo e email */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Sombra de texto média */
         }
     </style>
 </head>
 
+<!-- Corpo da página com classes Tailwind para layout responsivo -->
 <body class="min-h-screen flex flex-col items-center justify-center p-4">
+    <!-- Container principal que centraliza o conteúdo e limita a largura -->
     <div class="w-full max-w-4xl mx-auto flex flex-col items-center">
-        <!-- Seção de Perfil -->
+        <!-- Seção do cabeçalho com informações de perfil -->
         <header class="text-center mb-8">
+            <!-- Imagem de perfil do usuário -->
             <img src="files/luiz.webp" alt="Foto de Perfil Luiz Miguel 3D"
                 class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-[#cfcfcf] object-cover"
                 onerror="this.onerror=null; this.src='https://placehold.co/120x120/cccccc/333333?text=Erro';" />
+            <!-- Nome do usuário -->
             <h1 class="text-3xl font-bold text-[#e8e8e8] mb-1 text-shadow-strong">Luiz Miguel</h1>
+            <!-- Descrição/título do usuário -->
             <p class="text-sm italic text-[#b0b0b0] text-shadow-medium">3D Artist & Game Developer</p>
 
-            <!-- Contato -->
-            <h2 class="text-2xl mt-10 font-bold text-[#cdb5ff] mb-1 text-shadow-strong">Contact</h2>
-            <!-- Email de Contato -->
+            <!-- Seção de contato manual (mantida para clareza, poderia ser refatorada para JS também) -->
+            <h2 class="text-xl font-semibold text-[#e8e8e8] mt-6 mb-2 text-shadow-strong">Contato</h2>
             <p class="text-md mt-2">
                 <a href="mailto:contact.luizmiguel3d@gmail.com"
                     class="hover:underline text-[#cdb5ff] text-shadow-medium">contact.luizmiguel3d@gmail.com</a>
             </p>
-            <!-- Contato Linkedin -->
             <p class="text-md mt-2">
-                <a href="https://www.linkedin.com/in/luiz-miguel-374850197/"
+                <a href="https://www.linkedin.com/in/luiz-miguel-374850197/" target="_blank" rel="noopener noreferrer"
                     class="hover:underline text-[#cdb5ff] text-shadow-medium">LinkedIn</a>
             </p>
-
         </header>
 
-        <!-- Container para os cartões de categoria -->
+        <!-- Container para as seções de links, com layout responsivo (coluna em mobile, linha em desktop) -->
         <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 w-full justify-center items-start">
-            <!-- Cartão: Game Development -->
-            <div class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2 border-2 border-[#242431]">
+            <!-- Seção de Desenvolvimento de Jogos -->
+            <div id="game-development-links"
+                class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2 border-2 border-[#242431]">
                 <h2 class="category-title text-[#cc6483]">Game Development</h2>
-                <div class="space-y-4">
-                    <!-- Link: Memory Traces: Egypt on Steam -->
-                    <a href="https://store.steampowered.com/app/2150580/Memory_Traces_Egypt/?curator_clanid=42284791"
-                        target="_blank" rel="noopener noreferrer" class="link-button">
-                        <img src="files/mt-egypt.webp" alt="Ícone Egito" class="icon-placeholder" />
-                        <span class="button-content-area">
-                            <span class="button-text">Memory Traces: Egypt on Steam</span>
-                        </span>
-                    </a>
-
-                    <!-- Link: Memory Traces: Japan on Steam -->
-                    <a href="https://store.steampowered.com/app/1906180/Memory_Traces_Japan/?curator_clanid=42284791"
-                        target="_blank" rel="noopener noreferrer" class="link-button">
-                        <img src="files/mt-japan.webp" alt="Ícone Japão" class="icon-placeholder" />
-                        <span class="button-content-area">
-                            <span class="button-text">Memory Traces: Japan on Steam</span>
-                        </span>
-                    </a>
-
-                    <!-- Link: Cats in Wonderland on Steam -->
-                    <a href="https://store.steampowered.com/app/3023020/Cats_in_Wonderland/" target="_blank"
-                        rel="noopener noreferrer" class="link-button">
-                        <img src="files/cats.webp" alt="Ícone Gatos" class="icon-placeholder" />
-                        <span class="button-content-area">
-                            <span class="button-text">Cats in Wonderland on Steam</span>
-                        </span>
-                    </a>
-
-                    <!-- Link: GAMES & PROTOTYPES (Itch.io) -->
-                    <a href="https://luizmiguel3d.itch.io/" target="_blank" rel="noopener noreferrer"
-                        class="link-button">
-                        <img src="files/itch-io.webp" alt="Ícone Itch.io" class="icon-placeholder" />
-                        <span class="button-content-area">
-                            <span class="button-text">GAMES & PROTOTYPES</span>
-                        </span>
-                    </a>
-                </div>
+                <!-- Os links serão inseridos aqui via JavaScript -->
+                <div class="space-y-4" id="game-links-container"></div>
             </div>
 
-            <!-- Cartão: 3D Realtime and Renders -->
-            <div class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2 border-2 border-[#242431]">
+            <!-- Seção de Arte 3D, VFX, Renders -->
+            <div id="3d-art-links"
+                class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2 border-2 border-[#242431]">
                 <h2 class="category-title text-[#66aacc]">3D Art, VFX, Renders</h2>
-                <div class="space-y-4">
-                    <!-- Link: Photorealistic Renders (Behance - lm3d_design) -->
-                    <a href="https://www.behance.net/lm3d_design" target="_blank" rel="noopener noreferrer"
-                        class="link-button">
-                        <img src="files/render.webp" alt="Ícone Renders" class="icon-placeholder" />
-                        <span class="button-content-area">
-                            <span class="button-text">Photorealistic Renders</span>
-                        </span>
-                    </a>
-
-                    <!-- Link: 3D Art (Instagram - luizmiguel3d) -->
-                    <a href="https://www.instagram.com/luizmiguel3d/" target="_blank" rel="noopener noreferrer"
-                        class="link-button">
-                        <img src="files/3d-art.webp" alt="Ícone Arte 3D" class="icon-placeholder" />
-                        <span class="button-content-area">
-                            <span class="button-text">3D Art</span>
-                        </span>
-                    </a>
-                </div>
+                <!-- Os links serão inseridos aqui via JavaScript -->
+                <div class="space-y-4" id="art-links-container"></div>
             </div>
         </div>
 
-        <!-- Rodapé -->
-        <footer class="mt-8 text-center text-sm text-white">
-            <!-- Removido o parágrafo de direitos reservados -->
+        <!-- Rodapé (vazio, pode ser removido se não for utilizado) -->
+        <footer>
         </footer>
     </div>
+
+    <script>
+        // Função para criar um elemento de link
+        function createLinkElement(link) {
+            const a = document.createElement('a');
+            a.href = link.href;
+            a.target = '_blank'; // Abre o link em uma nova aba
+            a.rel = 'noopener noreferrer'; // Melhora a segurança e performance
+            a.className = 'link-button'; // Aplica as classes de estilo do botão
+
+            const img = document.createElement('img');
+            img.src = link.imgSrc;
+            img.alt = link.imgAlt;
+            img.className = 'icon-placeholder'; // Aplica as classes de estilo do ícone
+            // Fallback para imagem caso a original não carregue
+            img.onerror = function() {
+                this.onerror = null;
+                this.src = `https://placehold.co/50x50/cccccc/333333?text=${encodeURIComponent(link.imgAlt.substring(0, 3))}`;
+            };
+
+            const spanContentArea = document.createElement('span');
+            spanContentArea.className = 'button-content-area';
+
+            const spanText = document.createElement('span');
+            spanText.className = 'button-text';
+            spanText.textContent = link.text;
+
+            spanContentArea.appendChild(spanText);
+            a.appendChild(img);
+            a.appendChild(spanContentArea);
+
+            return a;
+        }
+
+        // Dados dos links organizados por categoria
+        const linksData = {
+            'game-development': [
+                {
+                    href: 'https://store.steampowered.com/app/2150580/Memory_Traces_Egypt/?curator_clanid=42284791',
+                    imgSrc: 'files/mt-egypt.webp',
+                    imgAlt: 'Ícone Egito',
+                    text: 'Memory Traces: Egypt on Steam'
+                },
+                {
+                    href: 'https://store.steampowered.com/app/1906180/Memory_Traces_Japan/?curator_clanid=42284791',
+                    imgSrc: 'files/mt-japan.webp',
+                    imgAlt: 'Ícone Japão',
+                    text: 'Memory Traces: Japan on Steam'
+                },
+                {
+                    href: 'https://store.steampowered.com/app/3023020/Cats_in_Wonderland/',
+                    imgSrc: 'files/cats.webp',
+                    imgAlt: 'Ícone Gatos',
+                    text: 'Cats in Wonderland on Steam'
+                },
+                {
+                    href: 'https://luizmiguel3d.itch.io/',
+                    imgSrc: 'files/itch-io.webp',
+                    imgAlt: 'Ícone Itch.io',
+                    text: 'GAMES & PROTOTYPES'
+                }
+            ],
+            '3d-art': [
+                {
+                    href: 'https://www.behance.net/lm3d_design',
+                    imgSrc: 'files/render.webp',
+                    imgAlt: 'Ícone Renders',
+                    text: 'Photorealistic Renders'
+                },
+                {
+                    href: 'https://www.instagram.com/luizmiguel3d/',
+                    imgSrc: 'files/3d-art.webp',
+                    imgAlt: 'Ícone Arte 3D',
+                    text: '3D Art'
+                }
+            ]
+        };
+
+        // Adiciona os links ao DOM quando a página é carregada
+        document.addEventListener('DOMContentLoaded', () => {
+            const gameLinksContainer = document.getElementById('game-links-container');
+            const artLinksContainer = document.getElementById('art-links-container');
+
+            // Itera sobre os dados de links de desenvolvimento de jogos e os adiciona ao container
+            linksData['game-development'].forEach(link => {
+                gameLinksContainer.appendChild(createLinkElement(link));
+            });
+
+            // Itera sobre os dados de links de arte 3D e os adiciona ao container
+            linksData['3d-art'].forEach(link => {
+                artLinksContainer.appendChild(createLinkElement(link));
+            });
+        });
+    </script>
 </body>
 
 </html>
