@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luiz Miguel 3D - Links</title>
+    
+    <title>Luiz Miguel 3D</title>    
+    <link rel="icon" type="image/x-icon" href="files/favicon.ico">
+    
     <!-- Carrega o framework Tailwind CSS para estilização rápida e responsiva -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Carrega a fonte 'Montserrat' do Google Fonts para uma tipografia consistente -->
@@ -100,10 +103,16 @@
 <body class="min-h-screen flex flex-col items-center justify-center p-4">
     <!-- Container principal que centraliza o conteúdo e limita a largura -->
     <div class="w-full max-w-4xl mx-auto flex flex-col items-center">
+        
         <!-- Seção do cabeçalho com informações de perfil -->
-        <header class="text-center mb-8">           
+        <header class="text-center mb-8">   
+            <!-- Imagem de perfil do usuário -->
+            <img src="files/profile.webp" alt="Foto de Perfil Luiz Miguel 3D"
+            class="w-32 h-32 mx-auto mb-4 object-cover"
+            onerror="this.onerror=null; this.src='https://placehold.co/120x120/cccccc/333333?text=Erro';" />
+
             <!-- Nome do usuário -->
-            <h1 class="text-3xl font-bold text-[#e8e8e8] mb-1 text-shadow-strong">Luiz Miguel</h1>
+            <h1 class="text-3xl font-bold text-[#e8e8e8] mb-1 text-shadow-strong">Luiz Miguel</h1>            
             <!-- Descrição/título do usuário -->
             <p class="text-sm italic text-[#b0b0b0] text-shadow-medium">3D Artist & Game Developer</p>
 
