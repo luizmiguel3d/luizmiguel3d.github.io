@@ -103,28 +103,34 @@
 <body class="min-h-screen flex flex-col items-center justify-center p-4">
     <!-- Container principal que centraliza o conteúdo e limita a largura -->
     <div class="w-full max-w-4xl mx-auto flex flex-col items-center">
-        
         <!-- Seção do cabeçalho com informações de perfil -->
         <header class="text-center mb-8">   
             <!-- Imagem de perfil do usuário -->
             <img src="files/profile.webp" alt="Foto de Perfil Luiz Miguel 3D"
-            class="w-32 h-32 mx-auto mb-4 object-cover"
+            class="w-32 h-32 mx-auto mb-2 object-cover"
             onerror="this.onerror=null; this.src='https://placehold.co/120x120/cccccc/333333?text=Erro';" />
 
-            <!-- Nome do usuário -->
-            <h1 class="text-3xl font-bold text-[#e8e8e8] mb-1 text-shadow-strong">Luiz Miguel</h1>            
-            <!-- Descrição/título do usuário -->
-            <p class="text-sm italic text-[#b0b0b0] text-shadow-medium">3D Artist & Game Developer</p>
+            <!-- Nome -->
+            <h1 class="text-3xl font-bold text-[#e8e8e8] text-shadow-strong">Luiz Miguel</h1>            
+            <!-- Username -->
+            <p class="text-sm italic text-[#e8e8e8] mb-4 text-shadow-medium">/ luizmiguel3d</p>
 
-            <!-- Seção de contato manual (mantida para clareza, poderia ser refatorada para JS também) -->
-            <h2 class="text-xl font-semibold text-[#cdb5ff] mt-6 mb-2 text-shadow-strong">Contact</h2>
+            <!-- Descrição/título do usuário -->
+            <p class="text-sm italic text-[#b0b0b0] text-shadow-medium"> Freelancer Game Developer</p>
+            <p class="text-sm italic text-[#b0b0b0] text-shadow-medium"> Programmer | 3D Artist</p>
+
+            <!-- Contato -->
+            <h2 class="text-xl font-semibold text-[#8f7fb3] mt-6 text-shadow-strong">Contact</h2>
             <p class="text-md mt-2">
                 <a href="mailto:contact.luizmiguel3d@gmail.com"
-                    class="hover:underline text-[#cdb5ff] text-shadow-medium">contact.luizmiguel3d@gmail.com</a>
+                    class="hover:underline text-[#decfff] text-shadow-medium">contact.luizmiguel3d@gmail.com</a>
             </p>
             <p class="text-md mt-2">
                 <a href="https://www.linkedin.com/in/luiz-miguel-374850197/" target="_blank" rel="noopener noreferrer"
-                    class="hover:underline text-[#cdb5ff] text-shadow-medium">LinkedIn</a>
+                    class="hover:underline text-[#decfff] text-shadow-medium">LinkedIn </a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="assets/luizmiguel3d_resume.pdf" target="_blank" rel="noopener noreferrer"
+                    class="hover:underline text-[#decfff] text-shadow-medium">Resume PDF</a>
             </p>
         </header>
 
@@ -133,7 +139,7 @@
             <!-- Seção de Desenvolvimento de Jogos -->
             <div id="game-development-links"
                 class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2 border-2 border-[#242431]">
-                <h2 class="category-title text-[#cc6483]">Game Development</h2>
+                <h2 class="category-title text-[#b35773]">Game Development</h2>
                 <!-- Os links serão inseridos aqui via JavaScript -->
                 <div class="space-y-4" id="game-links-container"></div>
             </div>
@@ -141,7 +147,7 @@
             <!-- Seção de Arte 3D, VFX, Renders -->
             <div id="3d-art-links"
                 class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2 border-2 border-[#242431]">
-                <h2 class="category-title text-[#66aacc]">3D Art, VFX, Renders</h2>
+                <h2 class="category-title text-[#5993b3]">3D Art, VFX, Renders</h2>
                 <!-- Os links serão inseridos aqui via JavaScript -->
                 <div class="space-y-4" id="art-links-container"></div>
             </div>
