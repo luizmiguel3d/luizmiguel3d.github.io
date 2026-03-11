@@ -136,18 +136,23 @@
 
         <!-- Container para as seções de links, com layout responsivo (coluna em mobile, linha em desktop) -->
         <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 w-full justify-center items-start">
-            <!-- Seção de Desenvolvimento de Jogos -->
-            <div id="game-development-links"
-                class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2 border-2 border-[#242431]">
-                <h2 class="category-title text-[#b35773]">Game Development</h2>
+            <!-- Seção de programação de Jogos -->            
+            <div id="game-programmer-links"
+                class="bg-[#212433] bg-opacity-25 space-y-4 rounded-xl p-6 shadow-lg w-full md:w-1/2 border-2 border-[#242431]">
+                <h2 class="category-title text-[#57b36e]">Game Programming</h2>
                 <!-- Os links serão inseridos aqui via JavaScript -->
-                <div class="space-y-4" id="game-links-container"></div>
+                <div class="space-y-4" id="programmer-links-container"></div>
+
+                <!-- Seção de Outros -->
+                <h2 class="category-title text-[#5993b3]">Others</h2>
+                <!-- Os links serão inseridos aqui via JavaScript -->
+                <div class="space-y-4" id="other-links-container"></div>
             </div>
 
             <!-- Seção de Arte 3D, VFX, Renders -->
             <div id="3d-art-links"
                 class="bg-[#212433] bg-opacity-25 rounded-xl p-6 shadow-lg w-full md:w-1/2 border-2 border-[#242431]">
-                <h2 class="category-title text-[#5993b3]">3D Art, VFX, Renders</h2>
+                <h2 class="category-title text-[#b35773]">3D Art, VFX, Renders</h2>
                 <!-- Os links serão inseridos aqui via JavaScript -->
                 <div class="space-y-4" id="art-links-container"></div>
             </div>
@@ -193,25 +198,27 @@
 
         // Dados dos links organizados por categoria
         const linksData = {
-            'game-development': [
+            'game-programmer': [
                 {
                     href: 'https://store.steampowered.com/app/2150580/Memory_Traces_Egypt/?curator_clanid=42284791',
                     imgSrc: 'files/mt-egypt.webp',
                     imgAlt: 'Ícone Egito',
-                    text: 'Memory Traces: Egypt on Steam'
+                    text: 'Memory Traces: Egypt'
                 },
                 {
                     href: 'https://store.steampowered.com/app/1906180/Memory_Traces_Japan/?curator_clanid=42284791',
                     imgSrc: 'files/mt-japan.webp',
                     imgAlt: 'Ícone Japão',
-                    text: 'Memory Traces: Japan on Steam'
+                    text: 'Memory Traces: Japan'
                 },
                 {
                     href: 'https://store.steampowered.com/app/3023020/Cats_in_Wonderland/',
                     imgSrc: 'files/cats.webp',
                     imgAlt: 'Ícone Gatos',
-                    text: 'Cats in Wonderland on Steam'
-                },
+                    text: 'Cats in Wonderland'
+                }                
+            ],
+            'other': [                
                 {
                     href: 'https://luizmiguel3d.itch.io/',
                     imgSrc: 'files/itch-io.webp',
@@ -255,12 +262,18 @@
 
         // Adiciona os links ao DOM quando a página é carregada
         document.addEventListener('DOMContentLoaded', () => {
-            const gameLinksContainer = document.getElementById('game-links-container');
+            const programmerLinksContainer = document.getElementById('programmer-links-container');
+            const otherLinksContainer = document.getElementById('other-links-container');
             const artLinksContainer = document.getElementById('art-links-container');
 
+            // Itera sobre os dados de links de programação de jogos e os adiciona ao container
+            linksData['game-programmer'].forEach(link => {
+                programmerLinksContainer.appendChild(createLinkElement(link));
+            });
+
             // Itera sobre os dados de links de desenvolvimento de jogos e os adiciona ao container
-            linksData['game-development'].forEach(link => {
-                gameLinksContainer.appendChild(createLinkElement(link));
+            linksData['other'].forEach(link => {
+                otherLinksContainer.appendChild(createLinkElement(link));
             });
 
             // Itera sobre os dados de links de arte 3D e os adiciona ao container
